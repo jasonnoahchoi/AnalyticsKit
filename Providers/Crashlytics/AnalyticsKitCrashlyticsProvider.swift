@@ -1,5 +1,5 @@
 import Foundation
-import Crashlytics
+import Firebase
 
 public class AnalyticsKitCrashlyticsProvider: NSObject, AnalyticsKitProvider {
     fileprivate func clsLog(_ message: String) {

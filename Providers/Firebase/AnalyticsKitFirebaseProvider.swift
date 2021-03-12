@@ -1,5 +1,5 @@
 import Foundation
-import Firebase
+import FirebaseAnalytics
 
 class AnalyticsKitFirebaseProvider: NSObject, AnalyticsKitProvider {
 
