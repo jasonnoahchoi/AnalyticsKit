@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
 
 
-  s.platform     = :ios, '8.4'
+  s.platform     = :ios, '11.0'
   s.source       = { :git => "https://github.com/twobitlabs/AnalyticsKit.git", :tag => s.version.to_s }
   s.requires_arc = false
 
@@ -30,25 +30,19 @@ Pod::Spec.new do |s|
 
   s.subspec 'Crashlytics' do |c|
     c.source_files = 'Providers/Crashlytics/AnalyticsKitCrashlyticsProvider.swift'
-    c.frameworks = 'Crashlytics', 'Security', 'SystemConfiguration'
-    c.libraries = 'c++', 'z'
-    c.dependency 'Crashlytics'
+    c.dependency 'Firebase/Crashlytics'
     c.dependency 'AnalyticsKit/Core'
-    c.pod_target_xcconfig = {
-      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/Crashlytics/iOS'
-      # 'OTHER_LDFLAGS'          => '$(inherited) -undefined dynamic_lookup'
-    }
   end
 
   s.subspec 'Firebase' do |f|
     f.source_files = 'Providers/Firebase/AnalyticsKitFirebaseProvider.swift'
-    f.dependency 'Firebase'
+    f.dependency 'Firebase/Analytics'
     f.dependency 'AnalyticsKit/Core'
   end
 
   s.subspec 'Mixpanel' do |m|
     m.source_files = 'Providers/Mixpanel/AnalyticsKitMixpanelProvider.swift'
-    m.dependency 'Mixpanel', '~> 3.1'
+    m.dependency 'Mixpanel-swift'
     m.dependency 'AnalyticsKit/Core'
   end
 end
