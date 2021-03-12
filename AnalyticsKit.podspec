@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "AnalyticsKit"
-  s.version      = "2.1.2"
+  s.version      = "2.1.3"
 
   s.summary      = "Analytics framework for iOS"
 
