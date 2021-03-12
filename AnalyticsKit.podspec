@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '11.0'
   s.source       = { :git => "https://github.com/twobitlabs/AnalyticsKit.git", :tag => s.version.to_s }
   s.requires_arc = false
+  s.static_framework = true
 
   s.subspec 'Core' do |core|
     core.source_files  = 'AnalyticsKit.swift', 'AnalyticsKitEvent.swift', 'AnalyticsKitDebugProvider.swift', 'AnalyticsKitUnitTestProvider.swift', 'AnalyticsKit/AnalyticsKit/AnalyticsKitTimedEventHelper.swift'
