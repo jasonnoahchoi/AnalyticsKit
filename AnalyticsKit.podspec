@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
   s.subspec 'Crashlytics' do |c|
     c.source_files = 'Providers/Crashlytics/AnalyticsKitCrashlyticsProvider.swift'
     c.dependency 'Firebase/Crashlytics'
+    c.dependency 'Firebase/Analytics'
     c.dependency 'AnalyticsKit/Core'
   end
 
