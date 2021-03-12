@@ -1,6 +1,5 @@
 import Foundation
 
-@objc
 public protocol AnalyticsKitProvider {
     func applicationWillEnterForeground()
     func applicationDidEnterBackground()
@@ -18,7 +17,6 @@ public protocol AnalyticsKitProvider {
     func logError(_ name: String, message: String?, properties: [String: Any]?, error: Error?)
 }
 
-@objcMembers
 public class AnalyticsKit: NSObject {
     fileprivate static let DefaultChannel = "default"
 

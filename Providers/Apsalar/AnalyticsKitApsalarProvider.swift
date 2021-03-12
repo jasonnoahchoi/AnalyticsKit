@@ -4,7 +4,6 @@ public class AnalyticsKitApsalarProvider: NSObject, AnalyticsKitProvider {
     private var apiKey: String?
     private var secret: String?
 
-    @objc(initWithAPIKey:andSecret:andLaunchOptions:)
     public init(apiKey: String, secret: String, launchOptions options: [AnyHashable: Any]?) {
         Apsalar.startSession(apiKey, withKey: secret, andLaunchOptions: options)
         self.apiKey = apiKey
